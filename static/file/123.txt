@@ -1,0 +1,94 @@
+确认导入文件中的Item No不可为空，否则提示报错
+确认导入文件中的Item No必须在Item Master中存在，否则提示报错
+确认导入文件中的MPS Date不可为空，否则提示报错
+确认导入文件中的MPS Date格式需为YYYY-MM-DD或YYYY/MM/DD，否则提示报错
+确认导入文件中的MPS Date不可小于系统当前日，否则提示报错
+确认导入文件中的MPS Date必须为该供应商的工作日，否则提示报错
+确认导入文件中的Vendor不可为空，否则提示报错
+确认导入文件中的Vendor必须在Vendor Master中存在，否则提示报错
+确认导入文件中的Vendor对应的日历类型被设定，否则提示报错
+确认导入文件中的MPS Quantity不可为空，否则提示报错
+确认导入文件中的MPS Quantity必须为数字类型，否则提示报错
+确认导入文件中的MPS Quantity不可为负数，否则提示报错
+确认导入文件中，Item No + MPS Date + Vendor的组合不可重复出现
+确认若勾选了【Delete Original MPS within Month】选项，则删除对应【Item No】,【Vendor】,【MPS Date】 所在月份，并且必须大于等于系统当前日的所有预测记录
+确认若没有勾选【Delete Original MPS within Month】选项，则在部品销售预测表中检索是否存在相同【Item No】，【MPS Date】，【Vendor】，【Calendar Type】的记录，若存在，则将这些记录从部品销售预测表中删除，再将导入文件中的记录新增到部品销售预测表里去
+确认若没有勾选【Delete Original MPS within Month】选项，在部品销售预测表中检索是否存在相同【Item No】，【MPS Date】，【Vendor】,【Calendar Type】的记录，若不存在，则将导入文件中的记录新增到部品销售预测表里去
+确认导入完成后，【Delete Original MPS within Month】选项变更为非勾选状态
+
+
+OMR 多货位
+
+OMS 多个报价
+
+WEB EUC, 
+
+MO RELEASE ,MO BATCH RELEASE
+超过自动发行量，就拒绝发行
+
+
+OMS Ammic to curise库存优化
+预约，做发票，confirm
+
+lot批号格式变更
+
+30 + 1000 =648		14.5
+10 = 168			16.7
+10 +1000 =256		14.8
+
+- = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - = - =
+
+返回空的menssage框：as_errmsg的属性为value，而不是reference
+履历的交易日期comfirm时候有问题
+Inventory Detail
+记录系统日还不是出库日
+
+CO Invoice For PO	订单
+投递仓库设定Sectm
+Item上设置Carton Item
+
+
+decimal{6}
+if dw_1.AcceptText() < 0 then return
+
+Favourite:
+1.确认点击鼠标右键，窗口的Menu菜单正常显示
+2.确认双击选中一条记录，能够打开对应的Entry界面
+3.确认鼠标右击打开菜单选中New选项，能够打开新建界面
+4.确认选中一条记录，鼠标右击打开菜单选中Modify选项，能够打开对应的修改界面
+5.确认选中一条记录，鼠标右击打开菜单选中Delete选项，能够成功删除选中的记录
+6.确认选中一条记录，鼠标右击打开菜单选中Inquire选项，能够打开对应的查看界面
+7.确认鼠标右击打开菜单选中Part Sales Forecast Import选项，能够打开Part Sales Forecast Import界面
+8.确认双击窗口空白处，能够打开对应的Find界面
+
+Find:
+1.确认点击Find按钮，能够根据检索栏条件检索表partsalesmpsf，将检索结果显示到结果栏中
+2.确认窗口左下角的Row retrieved的数字与结果栏中记录条数一致
+3.确认点击Refresh按钮能够清空检索栏中的条件
+4.确认点击Add to List按钮，能够将结果栏内选中的记录加到Favourite界面上
+5.确认点击Add All to List按钮，能够将结果栏中的记录都加到Favourite界面上
+6.确认选中Replace选项，再点击Add to List按钮，能够将结果栏内选中的记录替换掉Favourite界面上原有的记录
+7.确认MPS Date的日历按钮使用正常
+
+Entry:
+1.确认点击Retrieve按钮，能够根据检索栏条件检索表partsalesmpsf，将检索结果显示到结果栏中
+2.确认Item No为必须输入项
+3.确认Vendor为必须输入项
+4.确认MPS Date为必须输入项
+5.确认New的时候，MPS Date默认为从系统当前日到往后7天
+6.确认Modify的时候，MPS Date默认为选中记录的MPS Date
+7.确认Modify的时候，Item No默认为选中记录的Item No
+8.确认Modify的时候，Vendor默认为选中记录的Vendor
+9.确认Inquire的时候，MPS Date默认为选中记录的MPS时间
+10.确认Inquire的时候，Item No默认为选中记录的Item No
+11.确认Inquire的时候，Vendor默认为选中记录的Vendor
+12.确认Inquire的时候，MPS Quantity和Note为不可编辑状态
+13.确认Inquire的时候，按钮Update不可见
+14.确认当日期为假期(H)时，MPS Quantity为不可编辑状态
+15.确认当日期为假期(H)时，Note为不可编辑状态
+16.确认当日期为假期(H)时，H的字体颜色为红色
+17.确认New的时候，若MPS Quantity为0，且Note为空时，该条记录不会新增到数据库中去
+18.确认New的时候，若MPS Quantity为0，且Note为不空时，该条记录会新增到数据库中去
+19.确认Modify的时候，若MPS Quantity被变更为0，该条记录不会被删除，且它对应的MPS Quantity会被更新为0
+20.确认当结果栏中的记录没有发生变更时，按钮Update不可用
+21.确认当检索栏数据发生变更时，结果栏中的数据会被清空
